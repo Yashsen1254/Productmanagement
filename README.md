@@ -21,7 +21,7 @@ This README provides details for setting up the database for the Product Managem
 
 ## Introduction
 
-The CCTV Management System database is designed to manage various entities such as user roles, products, services, purchases, sales, and permissions. This README provides the SQL script necessary to create and populate the database.
+The Product Management System database is designed to manage various entities such as user roles, products, services, purchases, sales, and permissions. This README provides the SQL script necessary to create and populate the database.
 
 ## Database Schema
 
