@@ -1,74 +1,54 @@
 # Product Management System
 
-This README provides details for setting up the database for the Product Management System. The system includes user roles, product management, service tracking, purchase records, sales records, module management, and permissions for various operations.
+## Project Description
 
-## Table of Contents
+### Overview
 
-1. [Introduction](#introduction)
-2. [Database Schema](#database-schema)
-   - [Roles Table](#roles-table)
-   - [Users Table](#users-table)
-   - [Products Table](#products-table)
-   - [Services Table](#services-table)
-   - [Purchases Table](#purchases-table)
-   - [Sales Table](#sales-table)
-   - [Modules Table](#modules-table)
-   - [Permissions Table](#permissions-table)
-3. [Getting Started](#getting-started)
-4. [Contributors](#contributors)
-5. [License](#license)
-6. [Support](#support)
+The Product Management System is a comprehensive solution designed to manage various aspects of a business that deals with products and services. It efficiently organizes data related to user roles, products, services, purchases, sales, modules, and permissions. This system is intended to streamline operations, enhance productivity, and provide robust management capabilities for businesses involved in the sale, service, and maintenance of products.
 
-## Introduction
+### Features
 
-The Product Management System database is designed to manage various entities such as user roles, products, services, purchases, sales, and permissions. This README provides the SQL script necessary to create and populate the database.
+- **User Role Management**: Define and manage different roles within the system, such as Admin and Worker.
+- **User Management**: Create and manage user accounts with associated roles and permissions.
+- **Product Management**: Maintain a detailed catalog of products, including their names and prices.
+- **Service Tracking**: Record and track services provided to customers, including details about the buyer and service dates.
+- **Purchase Records**: Keep comprehensive records of product purchases, including supplier details and purchase dates.
+- **Sales Records**: Track sales transactions, including buyer information and sales dates.
+- **Module Management**: Define and manage different modules within the system for various functionalities.
+- **Permission Control**: Specify and manage user permissions for different modules, controlling add, edit, delete, and view operations.
 
-## Database Schema
+### Database Schema
 
-### Roles Table
+The database schema for the Product Management System includes the following tables:
 
-The `Roles` table stores information about different roles within the system.
+1. **Roles**: Stores information about different roles within the system.
+2. **Users**: Manages user accounts with details such as name, contact information, and assigned roles.
+3. **Products**: Stores details about individual products, including name and price.
+4. **Services**: Tracks services provided to customers, including buyer information and service dates.
+5. **Purchases**: Records purchases of products by the business, including supplier details and purchase dates.
+6. **Sales**: Tracks sales transactions of products, including buyer information and sales dates.
+7. **Modules**: Defines modules available within the system for managing various functionalities.
+8. **Permissions**: Specifies user permissions for different modules, allowing control over add, edit, delete, and view operations.
 
-```sql
-CREATE TABLE `Roles` (
-    `RoleId` INT PRIMARY KEY AUTO_INCREMENT,
-    `RoleName` VARCHAR(50) NOT NULL
-);
-```
+### Getting Started
 
-### Users Table
+To get started with the Product Management System:
 
-The `Users` table manages user accounts with details such as name, contact information, and assigned roles.
+1. **Database Setup**: Run the provided SQL script to create the Product Management System database and its tables.
+2. **Integration**: Integrate the Product Management System database with the backend of your management software.
+3. **Data Management**: Populate the database with initial data such as user roles, products, and modules.
+4. **Usage**: Utilize the database schema and tables to manage your products and services efficiently.
 
-```sql
-CREATE TABLE `Users` (
-    `UserId` INT PRIMARY KEY AUTO_INCREMENT,
-    `Name` VARCHAR(100) NOT NULL,
-    `Email` VARCHAR(100) NOT NULL UNIQUE,
-    `Password` VARCHAR(255) NOT NULL,
-    `RoleId` INT,
-    FOREIGN KEY (`RoleId`) REFERENCES `Roles` (`RoleId`)
-);
-```
+### Contributors
 
-### Products Table
+The Product Management System is developed and maintained by [Your Name or Organization]. Contributions are welcome via pull requests on [GitHub Repository URL].
 
-The `Products` table stores details about individual products, including name and price.
+### License
 
-```sql
-CREATE TABLE `Products` (
-    `ProductId` INT PRIMARY KEY AUTO_INCREMENT,
-    `Name` VARCHAR(100) NOT NULL,
-    `Price` INT NOT NULL
-);
-```
+This project is licensed under the [License Name] License - see the LICENSE.md file for details.
 
-### Services Table
+### Support
 
-The `Services` table tracks services provided to customers.
+For any inquiries or support regarding the Product Management System, please contact [Your Contact Information].
 
-```sql
-CREATE TABLE `Services` (
-    `ServiceId` INT PRIMARY KEY AUTO_INCREMENT,
-    `ProductId` INT NOT NULL,
-    `BuyerName` VARCHAR(100) NOT NULL
+Thank you for choosing the Product Management System for your business needs! We hope it helps streamline your operations and enhance your business success.
