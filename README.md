@@ -1,6 +1,6 @@
-# CCTV Management System
+# Product Management System
 
-This README provides details for setting up the database for the CCTV Management System. The system includes user roles, product management, service tracking, purchase records, sales records, module management, and permissions for various operations.
+This README provides details for setting up the database for the Product Management System. The system includes user roles, product management, service tracking, purchase records, sales records, module management, and permissions for various operations.
 
 ## Table of Contents
 
